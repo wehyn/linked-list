@@ -6,7 +6,7 @@ using namespace std;
         LinkedList list;
         int choice, position, data;
 
-        do {
+        /*do {
             cout << "\nList Operations:\n";
             cout << "1. Insert at beginning\n";
             cout << "2. Insert at end\n";
@@ -88,7 +88,9 @@ using namespace std;
                 cout << "Invalid choice, please try again\n";
                 break;
             }
-        } while (choice != 0);
+        } while (choice != 0); */
+
+        cout << "hello world";
 
         return 0;
     }

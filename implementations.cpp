@@ -3,12 +3,14 @@
 using namespace std;
 
 // Inserts an element at the beginning of the list
-void insertAtBeginning(int val) {
+void LinkedList::insertAtBeginning(int val) {
+    cout << "Hello world";
+    
     //TODO
 }
 
 // Inserts an element at a specific position
-void insertAfter(int val, int pos) {
+void LinkedList::insertAfter(int val, int pos) {
     Node* temp = head;
     for (int i = 1; i < pos; i++) {
         if (temp == NULL) {
@@ -34,7 +36,7 @@ void insertAfter(int val, int pos) {
 
 
 // Inserts an element at the end of the list
-void insert(int val) {
+void LinkedList::insert(int val) {
     Node* newNode = new Node;
     newNode->data = val;
     newNode->next = NULL;
@@ -51,7 +53,7 @@ void insert(int val) {
 }
 
 // Removes the element at a specified location from a non-empty list
-void removeAt(int pos) {
+void LinkedList::removeAt(int pos) {
     Node* temp1 = head;
     if (pos == 1) {
         head = temp1->next;
@@ -67,26 +69,32 @@ void removeAt(int pos) {
 }
 
 // Searches for an element in the list
-bool search(int val) {
+bool LinkedList::search(int val) {
     //TODO
+
+    return 0;
 }
 
 // Returns the number of elements in the list
-int getSize() {
+int LinkedList::getSize() {
+    return 0;
     //TODO
 }
 
 // Returns true if the list is empty, otherwise returns false
-bool isEmpty() {
+bool LinkedList::isEmpty() {
     return head == NULL;
 }
 
 // Returns true if the list is full, otherwise returns false
-bool isFull() {
+bool LinkedList::isFull() {
+
+    return 0;
     //TODO
 }
 
 // Displays the elements in the list
-void printList() {
+void LinkedList::printList() {
+
     //TODO
 };
