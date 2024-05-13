@@ -1,5 +1,9 @@
 #include<iostream>
 #include "data.h"
+#include <cctype>   
+#include <string>
+#include <cstring>
+#include <algorithm>
 using namespace std;
 
 void LinkedList:: insertAtBeginning(int val) {
