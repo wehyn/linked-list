@@ -8,6 +8,7 @@ struct Node {
 class LinkedList {
 private:
     Node* head;
+    int size;
 public:
     LinkedList() {
         head = NULL;
