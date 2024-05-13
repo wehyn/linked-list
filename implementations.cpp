@@ -6,12 +6,16 @@ void LinkedList:: insertAtBeginning(int val) {
     	Node *newNode = new Node;
     	newNode->data = val;
     	newNode->next = head;
-    	
+	
     	head = newNode;
     }
 
 void LinkedList:: insertAfter(int val,int pos) {
     Node* temp = head;
+	if(pos > 10){
+		size = 10;
+	}
+	
     for (int i = 1; i < pos; i++) {
         if (temp == NULL) {
             return;
@@ -99,7 +103,7 @@ bool LinkedList::isEmpty() {
 
 // Returns true if the list is full, otherwise returns false
 bool LinkedList::isFull() {
-    //TODO
+    return size >=10;
 }
 
 // Displays the elementsin the list
