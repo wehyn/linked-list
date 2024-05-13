@@ -68,9 +68,15 @@ void LinkedList::removeAt(int pos) {
 
 // Searches for an element in the list
 bool LinkedList::search(int val) {
-    //TODO
+    Node *ptr = head;
 
-    return 0;
+    while (ptr != NULL){
+		if (ptr->data == val){
+			return true;
+		}
+		ptr = ptr->next;
+	}
+	return false;
 }
 
 // Returns the number of elements in the list
