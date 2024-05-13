@@ -94,6 +94,7 @@ bool LinkedList::isEmpty() {
 // Returns true if the list is full, otherwise returns false
 bool LinkedList::isFull() {
     //TODO
+    return 0;
 }
 
 // Displays the elements in the list

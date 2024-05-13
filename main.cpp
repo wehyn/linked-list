@@ -1,13 +1,18 @@
 #include <iostream>
 #include "data.h"
+#include <cctype>   
+#include <string>
+#include <cstring>
+#include <algorithm>
+
 using namespace std;
 
     int main() {
         LinkedList list;
         int choice, position, data;
 
-        /*do {
-            cout << "\nList Operations:\n";
+        do {
+            cout << "\nLIST OPERATIONS:\n";
             cout << "1. Insert at beginning\n";
             cout << "2. Insert at end\n";
             cout << "3. Insert at position\n";
@@ -18,8 +23,20 @@ using namespace std;
             cout << "8. Check if list is empty\n";
             cout << "9. Check if list is full\n";
             cout << "0. Exit\n";
-            cout << "Enter your choice: ";
-            cin >> choice;
+
+            string s_choice;
+         
+            do {
+                cout << "\nEnter your choice: ";
+                getline(cin, s_choice);
+
+                if (s_choice.length() != 1 || !all_of(s_choice.begin(), s_choice.end(), ::isdigit)) {
+                    cout << "\x1b[31m\nInvalid Book ID! Please enter a 6-digit integer.\x1b[0m" << endl;
+                    cin.clear();
+                }
+            } while (s_choice.length() != 1 || !all_of(s_choice.begin(), s_choice.end(), ::isdigit));
+
+            choice = stoi(s_choice);
 
             switch (choice) {
             case 1:
@@ -88,9 +105,7 @@ using namespace std;
                 cout << "Invalid choice, please try again\n";
                 break;
             }
-        } while (choice != 0); */
-
-        cout << "hello world";
+        } while (choice != 0);
 
         return 0;
     }
