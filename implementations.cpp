@@ -1,17 +1,25 @@
 #include<iostream>
 #include "data.h"
+#include <cctype>   
+#include <string>
+#include <cstring>
+#include <algorithm>
 using namespace std;
 
 void LinkedList:: insertAtBeginning(int val) {
     	Node *newNode = new Node;
     	newNode->data = val;
     	newNode->next = head;
-    	
+	
     	head = newNode;
     }
 
 void LinkedList:: insertAfter(int val,int pos) {
     Node* temp = head;
+	if(pos > 10){
+		size = 10;
+	}
+	
     for (int i = 1; i < pos; i++) {
         if (temp == NULL) {
             return;
@@ -68,7 +76,15 @@ void LinkedList::removeAt(int pos) {
 
 // Searches for an element in the list
 bool LinkedList::search(int val) {
-    //TODO
+    Node *ptr = head;
+
+    while (ptr != NULL){
+		if (ptr->data == val){
+			return true;
+		}
+		ptr = ptr->next;
+	}
+	return false;
 }
 
 // Returns the number of elements in the list
@@ -91,10 +107,17 @@ bool LinkedList::isEmpty() {
 
 // Returns true if the list is full, otherwise returns false
 bool LinkedList::isFull() {
-    //TODO
+    return size >=10;
 }
 
-// Displays the elements in the list
+// Displays the elementsin the list
 void LinkedList::printList() {
-    //TODO
+    Node* ptr = head;
+
+    while(head != NULL){
+
+	cout<< head->data;
+	head = head->next;
+    }
+	cout<<endl;
 };
