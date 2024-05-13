@@ -102,7 +102,11 @@ bool LinkedList::isFull() {
     //TODO
 }
 
-// Displays the elements in the list
-void LinkedList::printList() {
-    //TODO
+// Displays the elementsin the list
+void LinkedList::printList(Node *head) {
+    while(!head = nullptr){
+	cout<<head->data;
+	head = head->next;
+    }
+	cout<<endl;
 };
